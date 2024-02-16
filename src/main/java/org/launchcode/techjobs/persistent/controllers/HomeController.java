@@ -70,7 +70,6 @@ public class HomeController {
             newJob.setSkills(skillObjs);
         }
         jobRepository.save(newJob);
-        model.addAttribute("jobs",jobRepository.findAll());
         return "redirect:view/" + newJob.getId();
 
     }
